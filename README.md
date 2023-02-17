@@ -10,7 +10,7 @@ To use this function, you can call it with a string of text as the argument, lik
 
 ```js
 import React from "react";
-import makeClickable from "./makeClickable";
+import makeClickable from "makeclickable";
 
 const text = "Check out my website: https://www.example.com";
 const clickableText = makeClickable(text);

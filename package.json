@@ -1,0 +1,24 @@
+{
+  "name": "makeclickable",
+  "version": "1.0.0",
+  "description": "check a text To make only the part of the link in your text clickable",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4SAMU/convert-text-to-url.git"
+  },
+  "keywords": [
+    "text",
+    "to",
+    "url"
+  ],
+  "author": "Samuel Nzomo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4SAMU/convert-text-to-url/issues"
+  },
+  "homepage": "https://github.com/4SAMU/convert-text-to-url#readme"
+}
