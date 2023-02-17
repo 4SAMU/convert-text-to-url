@@ -1,0 +1,13 @@
+<!-- @format -->
+
+## LICENSE
+
+Copyright (c) [2023] [Samuel_Nzomo]
+
+The README provides an overview of the `makeTextClickable` function, how to use it, what formats are supported, and how to customize it. It also includes a license statement indicating that the code is released under the MIT License. You can customize this README to fit the specific needs of your project.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this CODE and associated documentation files (the "CODE"), to deal in the CODE without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the CODE, and to permit persons to whom the CODE is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the CODE.
+
+THE CODE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE CODE OR THE USE OR OTHER DEALINGS IN THE CODE.

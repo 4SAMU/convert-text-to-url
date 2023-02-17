@@ -2,19 +2,31 @@
 
 export default function makeTextClickable(text) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
-  // Split the text into two parts: before and after the link
+  const phoneRegex = /(\+?\d{1,3}[-.\s]?)?\d{10}([-.\s]?\d{3,4})?/; // Match phone numbers with an optional country code
+  const emailRegex = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i; // Match email addresses
   const parts = text.split(urlRegex);
   return parts.map((part, i) => {
     if (urlRegex.test(part)) {
-      // If the current part is a URL, wrap it in an anchor tag
       return (
-        <a key={i} href={part}>
+        <a key={i} href={part} target="_blank" rel="noopener noreferrer">
+          {part}
+        </a>
+      );
+    } else if (phoneRegex.test(part)) {
+      return (
+        <a key={i} href={`tel:${part.replace(/[^\d+]/g, '')}`}>
+          {part}
+        </a>
+      );
+    } else if (emailRegex.test(part)) {
+      return (
+        <a key={i} href={`mailto:${part}`}>
           {part}
         </a>
       );
     } else {
-      // Otherwise, return the text unchanged
       return <span key={i}>{part}</span>;
     }
   });
-}
+};
+

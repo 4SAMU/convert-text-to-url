@@ -1,30 +1,37 @@
 <!-- @format -->
 
-# MakeClickable Function
+# Make Text Clickable
 
-This is a JavaScript function that takes a string of text as input and returns an array of React components that represent the same text, with URLs in the text wrapped in HTML anchor tags to make them clickable.
+This function takes a string of text and returns a React component that wraps URLs, phone numbers, and email addresses in clickable links.
 
-# Usage
+## Usage
 
-To use this function, you can call it with a string of text as the argument, like this:
+To use the `makeTextClickable` function, first import it in your React component:
 
-```js
-import React from "react";
-import makeClickable from "make-clickable"; 
+```javascript
+import makeTextClickable from "./makeTextClickable";
+const text = "Check out this link: https://example.com";
+const clickableText = makeTextClickable(text);
 
-const text = "Check out my website: https://www.example.com";
-const clickableText = makeClickable(text);
-
-// Render the clickable text
 return <div>{clickableText}</div>;
 ```
 
-This will render the text with the URL wrapped in an HTML anchor tag, allowing the user to click on the link and navigate to the URL.
+The resulting component will render the original text with clickable links for any URLs, phone numbers, or email addresses found in the text.
 
-# How it works
+## Supported Formats
 
-The function uses a regular expression to match URLs in the text, which is stored in the `urlRegex` constant. It then splits the text into an array of parts based on the URLs using the `split` method, and maps over the array to create a new array of components.
+The `makeTextClickable` function supports the following formats:
 
-For each part in the array, the function checks whether it matches the URL regular expression using the `test` method. If it does, the function creates a new anchor tag component using the part as the `href` attribute, and returns it. If it doesn't match the URL regular expression, the function returns a new span tag component with the part as its content.
+    URLs: any string of text that starts with "http://" or "https://"
+    Phone numbers: any string of 10 digits, with or without separators such as "-" or "."
+    Email addresses: any string of text in the format "name@example.com"
 
-The `key` prop is included on each component to help React keep track of them and optimize updates.
+## Customization
+
+If you'd like to customize the behavior of the `makeTextClickable` function, you can modify the regular expressions used to match URLs, phone numbers, and email addresses. These regular expressions are defined at the top of the makeTextClickable function, and you can modify them to match different formats as needed.
+
+Additionally, you can modify the HTML generated for each type of link by changing the code in the `map` function that returns the `<a>` tags. For example, you might want to add a `target="_blank"` attribute to open URLs in a new tab or window, or change the `href` attribute for phone numbers to use a different protocol.
+
+## License
+
+This code is released under the MIT License. See the `LICENSE` file for more information.
