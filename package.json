@@ -1,6 +1,6 @@
 {
   "name": "makeclickable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "check a text To make only the part of the link in your text clickable",
   "main": "index.js",
   "scripts": {

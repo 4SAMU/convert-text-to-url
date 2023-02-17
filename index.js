@@ -1,20 +1,21 @@
 /** @format */
 
-module.exports = function makeTextClickable(text) {
+export default function makeTextClickable(text) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   // Split the text into two parts: before and after the link
   const parts = text.split(urlRegex);
-  return parts.map((part, i) => {
-    if (urlRegex.test(part)) {
+  const result = [];
+  for (let i = 0; i < parts.length; i++) {
+    if (urlRegex.test(parts[i])) {
       // If the current part is a URL, wrap it in an anchor tag
-      return (
-        <a key={i} href={part}>
-          {part}
-        </a>
-      );
+      const link = document.createElement("a");
+      link.href = parts[i];
+      link.textContent = parts[i];
+      result.push(link);
     } else {
-      // Otherwise, return the text unchanged
-      return <span key={i}>{part}</span>;
+      // Otherwise, add the text as a plain text node
+      result.push(document.createTextNode(parts[i]));
     }
-  });
+  }
+  return result;
 };
