@@ -1,6 +1,6 @@
 /** @format */
 
-export default function makeTextClickable(text) {
+module.exports = function makeTextClickable(text) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
   // Split the text into two parts: before and after the link
   const parts = text.split(urlRegex);
@@ -17,4 +17,4 @@ export default function makeTextClickable(text) {
       return <span key={i}>{part}</span>;
     }
   });
-}
+};
