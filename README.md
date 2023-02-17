@@ -9,7 +9,7 @@ This function takes a string of text and returns a React component that wraps UR
 To use the `makeTextClickable` function, first import it in your React component:
 
 ```javascript
-import makeTextClickable from "./makeTextClickable";
+import makeTextClickable from "./index.js";
 const text = "Check out this link: https://example.com";
 const clickableText = makeTextClickable(text);
 
